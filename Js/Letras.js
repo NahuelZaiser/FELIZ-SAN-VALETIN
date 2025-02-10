@@ -17,7 +17,7 @@ function adjustFontSize() {
     const maxHeight = container.offsetHeight; // Alto del contenedor
 
     lines.forEach(line => {
-        let fontSize = 30; // Tamaño inicial de la fuente
+        let fontSize = 20; // Tamaño inicial de la fuente
         line.style.fontSize = `${fontSize}px`;
 
         // Reduce el tamaño de la fuente hasta que el texto quepa en el contenedor
