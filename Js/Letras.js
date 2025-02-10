@@ -11,10 +11,6 @@ textLines.forEach((line, index) => {
 
 function adjustFontSize() {
     const localContainer = document.querySelector('.text-overlay');
-    if (!localContainer) {
-        console.error("El contenedor '.text-overlay' no se encontró en el DOM.");
-        return;
-    }
     const maxWidth = localContainer.offsetWidth;
     const maxHeight = localContainer.offsetHeight;
 
