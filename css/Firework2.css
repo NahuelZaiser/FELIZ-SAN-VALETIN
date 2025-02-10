@@ -1,0 +1,60 @@
+
+/* Contenedor de los fuegos artificiales */
+.firework-container {
+  position: absolute;            /* Se posiciona respecto al viewport */
+  top: 5vh;                  /* Coloca el contenedor a 30% de la altura del viewport */
+  left: -51%;
+  width: 100%;
+  height: auto;               /* La altura se ajusta según el contenido */
+  display: flex;
+  justify-content: center;    /* Centrado horizontal */
+  align-items: center;        /* Centrado vertical dentro del contenedor */
+  z-index:50;               /* Se ubica sobre otros elementos */
+  pointer-events: none;       /* No interfiere con la interacción del usuario */
+  transform: translateY(0%);/* Ajusta para que el centro del contenedor quede en la posición deseada */
+}
+  
+  /* Estilos para el cohete */
+  .rocket {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    background: radial-gradient(circle, rgba(255, 150, 50, 0.9), rgba(255, 80, 0, 0.8));
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 80, 0, 0.8);
+    z-index: 50;
+  }
+  
+  /* Cola del cohete */
+  .rocket-tail {
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255, 200, 50, 0.8), rgba(255, 80, 0, 0));
+    border-radius: 50%;
+    transform-origin: top center;
+    z-index: 50;
+  }
+  
+  /* Estilos para las partículas */
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 50;
+  }
+  
+  /* Estilos para las chispas */
+  .spark {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 220, 180, 0.9);
+    border-radius: 50%;
+    z-index: 50;
+  }
+  
+  

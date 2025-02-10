@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.text-overlay {
+    position: fixed;
+    top: 30vh;               /* Posiciona el contenedor a 25% de la altura del viewport */
+    left: 0;
+    width: 100%;
+    height: auto;            /* O bien conservar 100% si lo necesitas para otros efectos */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical dentro del contenedor */
+    z-index: 20000;
+    pointer-events: none;
+    transform: translateY(-50%); /* Ajusta para que el centro del contenido quede en 25vh */
+}
+
+.neon-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #ff1177,
+        0 0 10px #ff1177,
+        0 0 20px #ff1177;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.line {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: calc(9s + (0.5s * var(--line-index)));
+    animation-fill-mode: forwards; /* Mantiene el estado inicial hasta que comience */
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
