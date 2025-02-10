@@ -10,18 +10,18 @@ lines.forEach((line, index) => {
     line.style.setProperty('--animation-delay', `${animationDelay}s`);
     line.style.setProperty('--line-index', index);
 });
+
 function adjustFontSize() {
     const container = document.querySelector('.container');
-    const lines = document.querySelectorAll('.line');
-    const maxWidth = container.offsetWidth; // Ancho del contenedor
-    const maxHeight = container.offsetHeight; // Alto del contenedor
+    const maxWidth = container.offsetWidth;
+    const maxHeight = container.offsetHeight;
 
-    lines.forEach(line => {
-        let fontSize = 20; // Tamaño inicial de la fuente
+    // Si necesitas volver a obtener las líneas, usa otro nombre, por ejemplo, 'localLines'
+    const localLines = document.querySelectorAll('.line');
+    localLines.forEach(line => {
+        let fontSize = 20;
         line.style.fontSize = `${fontSize}px`;
-
-        // Reduce el tamaño de la fuente hasta que el texto quepa en el contenedor
-        while (line.offsetWidth > maxWidth || line.offsetHeight > maxHeight) {
+        while ((line.offsetWidth > maxWidth || line.offsetHeight > maxHeight) && fontSize > 5) {
             fontSize--;
             line.style.fontSize = `${fontSize}px`;
         }
