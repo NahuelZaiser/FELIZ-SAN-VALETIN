@@ -15,7 +15,7 @@ function adjustFontSize() {
     const maxHeight = localContainer.offsetHeight;
 
     textLines.forEach(line => {
-        let fontSize = 20;
+        let fontSize = 30;
         line.style.fontSize = `${fontSize}px`;
         while ((line.offsetWidth > maxWidth || line.offsetHeight > maxHeight) && fontSize > 5) {
             fontSize--;
